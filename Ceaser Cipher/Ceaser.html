@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caesar Cipher Tool</title>
+    <script src="Main.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4f6d7a;
+            color: #dd6e42;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .container {
+            background-color: #e8dab2;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+        }
+        label {
+            font-size: 1rem;
+            margin-top: 10px;
+            display: block;
+        }
+        input, textarea, .button {
+            width: 96%;
+            margin-top: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+        .button {
+            background-color: #dd6e42;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .button:hover {
+            background-color: #930000;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Caesar Cipher</h1>
+    <form class="container">
+        <label for="inputText">Enter Text</label>
+        <textarea id="inputText" placeholder="Type your text here..."></textarea>
+
+        <label for="shift">Shift Value</label>
+        <input type="number" id="shift" placeholder="Enter shift value (e.g., 3)">
+
+        <label for="mode">Mode</label>
+        <select id="mode">
+            <option value="encrypt">Encrypt</option>
+            <option value="decrypt">Decrypt</option>
+        </select>
+        <label for="left_or_right">direction</label>
+        <select id="left_or_right">
+            <option value="right">Right</option>
+            <option value="left">Left</option>
+        </select>
+        <input type="submit" id="processButton" value="Process" class="button">
+
+        <label for="outputText">Output</label>
+        <textarea id="outputText" placeholder="The result will appear here..."></textarea>
+    </form>
+</body>
+</html>
